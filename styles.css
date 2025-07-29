@@ -1,4 +1,8 @@
 /* Reset and base styles */
+:root {
+  --light-gray-bg: #f0f2f5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +86,7 @@ header {
 /* Main Section */
 .main {
   padding: 70px 0;
-  background: #f8f9fa;
+  background: var(--light-gray-bg);
   display: flex;
 }
 
@@ -199,3 +203,84 @@ header {
   font-size: 36px;
   margin-bottom: 15px;
 }
+
+.parish-history {
+  background: var(--light-gray-bg);
+  padding: 40px 40px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parish-history h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.parish-history p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.parish-priests {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.parish-priests h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.priest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.priest-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 250px;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.priest-card:hover {
+  transform: translateY(-5px);
+}
+
+.priest-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.priest-card .name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.priest-card .term {
+  font-size: 0.95rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
