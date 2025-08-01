@@ -88,6 +88,7 @@ header {
   padding: 70px 0;
   background: var(--light-gray-bg);
   display: flex;
+  height: 700px;
 }
 
 .main-grid {
@@ -224,7 +225,7 @@ header {
 }
 
 .parish-priests {
-  padding: 120px 60px;
+  padding: 80px 60px;
 }
 
 .parish-priests h2 {
@@ -280,7 +281,7 @@ header {
 /*Mission*/
 .mission-vision {
   background-color: var(--light-gray-bg);
-  padding: 100px 40px;
+  padding: 80px 40px;
   /* text-align: center; */
 }
 
