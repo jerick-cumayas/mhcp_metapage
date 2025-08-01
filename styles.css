@@ -1,6 +1,7 @@
 /* Reset and base styles */
 :root {
   --light-gray-bg: #f0f2f5;
+  --light-blue: #4881fc;
 }
 
 * {
@@ -63,15 +64,15 @@ header {
 }
 
 .btn-primary {
-  background: #4881fc;
+  background: var(--light-blue);
   color: #fff;
   border: 2px solid transparent;
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #4881fc;
-  color: #4881fc;
+  border: 2px solid var(--light-blue);
+  color: var(--light-blue);
 }
 
 .btn-primary:hover {
@@ -79,7 +80,7 @@ header {
 }
 
 .btn-outline:hover {
-  background: #4881fc;
+  background: var(--light-blue);
   color: white;
 }
 
@@ -154,7 +155,7 @@ header {
 .divider {
   width: 50px;
   height: 4px;
-  background-color: #4881fc;
+  background-color: var(--light-blue);
   border: none;
   margin: 10px 0 70px 0;
 }
@@ -356,6 +357,11 @@ header {
   font-family: "Segoe UI", sans-serif;
 }
 
+.programs-section > .container > h1 {
+  font-size: 60px;
+  margin-bottom: 3rem;
+}
+
 /* .programs-section .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -390,6 +396,17 @@ header {
   text-align: center;
 }
 
+.card-header h2{
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 40px;
+  /* background-color: var(--light-blue);
+  border-radius: 20px;
+  padding: 10px 40px 10px 40px;
+  
+  color: white; */
+}
+
 /* RIGHT CONTENT SIDE */
 .program-card .card-content {
   flex: 3 1 400px;
@@ -402,6 +419,11 @@ header {
   column-gap: 4rem;
   row-gap: 2rem;
   padding-left: 1rem;
+}
+
+.details-list li {
+  transition: transform 5s ease;
+  list-style: none;
 }
 
 .program-card .card-content ul {
