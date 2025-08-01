@@ -394,6 +394,7 @@ header {
   font-size: 1.25rem;
   min-width: 200px;
   text-align: center;
+
 }
 
 .card-header h2{
@@ -420,6 +421,7 @@ header {
   row-gap: 2rem;
   padding-left: 1rem;
 }
+
 
 .details-list li {
   transition: transform 5s ease;
