@@ -88,6 +88,7 @@ header {
   padding: 70px 0;
   background: var(--light-gray-bg);
   display: flex;
+  height: 700px;
 }
 
 .main-grid {
@@ -224,7 +225,7 @@ header {
 }
 
 .parish-priests {
-  padding: 120px 60px;
+  padding: 80px 60px;
 }
 
 .parish-priests h2 {
@@ -280,7 +281,7 @@ header {
 /*Mission*/
 .mission-vision {
   background-color: var(--light-gray-bg);
-  padding: 100px 40px;
+  padding: 80px 40px;
   /* text-align: center; */
 }
 
@@ -348,87 +349,186 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Section base styling */
+/* GENERAL SECTION STYLING */
 .programs-section {
-    background-color: #f8f9fa;
-    padding: 60px 20px;
-    font-family: 'Segoe UI', sans-serif;
+  /* background: #f8f9fa; */
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.programs-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #333;
+/* .programs-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+} */
+
+.program-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
 
-/* Container & layout */
-.programs-section .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+/* .program-card:hover {
+  transform: translateY(-4px);
+} */
+
+/* LEFT HEADER SIDE */
+.program-card .card-header {
+  flex: 1 1 200px;
+  /* background: #0d6efd; */
+  /* color: white; */
+  padding: 30px 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  min-width: 200px;
+  text-align: center;
 }
 
-/* Individual program cards */
-.programs-section .financial-program,
-.programs-section .formation-program,
-.programs-section .ecological-program,
-.programs-section .other-programs {
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+/* RIGHT CONTENT SIDE */
+.program-card .card-content {
+  flex: 3 1 400px;
+  padding: 30px 25px;
 }
 
-.programs-section .financial-program h2,
-.programs-section .formation-program h2,
-.programs-section .ecological-program h2,
-.programs-section .other-programs h2 {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
+.details-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+  padding-left: 1rem;
 }
 
-/* Lists */
-.programs-section ul {
-    list-style: disc inside;
-    padding-left: 0;
-    margin: 0;
+.program-card .card-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #34495e;
 }
 
-.programs-section ul li {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #444;
+.program-card .card-content ul li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  text-align: justify;
 }
 
-/* Optional: Timeline style for financial monthly list */
-.financial-program ul:last-of-type {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
+/* SPECIAL CASE: TIMELINE STYLING */
+.program-card.financial-program .card-content ul:last-of-type {
+  margin-top: 20px;
+  columns: 2;
+  column-gap: 40px;
+  list-style: none;
+  padding-left: 0;
 }
 
-.financial-program ul:last-of-type li {
-    background: #e9ecef;
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    color: #333;
+.program-card.financial-program .card-content ul:last-of-type li {
+  margin: 6px 0;
+  padding-left: 18px;
+  position: relative;
 }
 
-/* Responsive */
+.program-card.financial-program .card-content ul:last-of-type li::before {
+  content: "📅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* RESPONSIVE STACKING ON SMALL SCREENS */
 @media (max-width: 768px) {
-    .programs-section .container {
-        padding: 0 15px;
-    }
+  .program-card {
+    flex-direction: column;
+  }
 
-    .programs-section .financial-program ul:last-of-type {
-        justify-content: center;
-    }
+  .program-card .card-header {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .program-card.financial-program .card-content ul:last-of-type {
+    columns: 1;
+  }
+}
+
+/* Section Base Style */
+.section {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Dark Section */
+.section.dark {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.section.dark h2 {
+  color: #ffffff;
+}
+
+.section.dark ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section.dark li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Pastor Section Quote */
+#pastor p {
+  font-style: italic;
+}
+
+#pastor strong {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  color: #34495e;
+}
+
+/* Contact Section */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Style */
+.site-footer {
+  background-color: #212529;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
 }
