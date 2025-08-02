@@ -471,7 +471,6 @@ header {
 .details-list li:hover{
   transform: scale(1.1);
 }
-
 .program-card .card-content ul {
   list-style: disc;
   padding-left: 20px;
@@ -505,7 +504,6 @@ header {
   left: 0;
   top: 0;
 }
-
 /* RESPONSIVE STACKING ON SMALL SCREENS */
 @media (max-width: 768px) {
   .program-card {
@@ -666,4 +664,5 @@ header {
 .gallery-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
 }
